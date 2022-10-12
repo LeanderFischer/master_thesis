@@ -1,0 +1,21 @@
+\chapter{Summary and Conclusions} \label{chap:summary}
+
+Discriminating tracks caused by $\nu_\mu$ charged-current interactions from cascades caused by both neutral-current interactions of all flavors and charged-current interactions of electron and tau neutrinos is essential to perform atmospheric neutrino oscillation measurements in IceCube as well as other experiments.
+Within this thesis, we develop a new method to distinguish tracks from cascades in IceCube DeepCore.
+The method utilizes a multivariate machine learning algorithm to maximize the information gained from the detector response.
+
+Interesting reconstructed variables are investigated to examine how useful they are in distinguishing tracks from cascades.
+The Gradient Tree Boosting algorithm is chosen to enhance the separation in tracks and cascades in comparison to a previously used univariate method.
+The algorithm is trained on selected reconstructed variables. The process of tuning the hyper-parameters of the algorithm is tested but is found to be not feasible due to insufficient amount of simulation statistics.
+The performance of the trained classifier is estimated resulting in an AUC of 0.662, whereas the formerly used PID variable $\chi^2$-ratio only reaches an AUC of 0.608.
+
+As a test case, the impact of the new PID method on the sensitivity to the atmospheric neutrino oscillation parameters $\Delta \mathrm{m}^{2}_{32}$ and $\theta_{23}$ is considered.
+For this purpose, the output probability score of the classifier is utilized as a new PID variable called GBM probability.
+The PID binning in the GBM probability is optimized for the two bin case and the three bin case by choosing the PID cut that leads to the largest reduction in the uncertainty of the atmospheric neutrino mixing parameters calculated relative to the uncertainties estimated using the $\chi^2$-ratio.
+Making use of the GBM probability and the optimized binning leads to significant improvement in the sensitivity to atmospheric neutrino oscillation parameters.
+The optimal configuration includes three PID bins and for an analysis including all systematic uncertainties apart from the detector systematics, the size of the 68\,\% confidence region is reduced by 13\,\% for $\Delta \mathrm{m}^{2}_{32}$ and by 7.2\,\% for $\Delta(\sin^{2}(\theta_{23}))$.
+The resulting uncertainties are $\Delta(\Delta \mathrm{m}^{2}_{32}) = 4.32\cdot10^{-5}\,\mathrm{eV}^2$ and $\Delta(\sin^{2}(\theta_{23})) = 7.10\cdot10^{-2}$.
+
+The developed method can be extended to incorporate additional features from other reconstruction algorithms as well as low-level observables from the detector response.
+The GBM probability will be used as PID discriminator in the upcoming 8-year IceCube DeepCore oscillation analysis.
+The relative improvement achieved with this multivariate method over a univariate classifier is expected to increase further with the inclusion of detector systematic uncertainties.

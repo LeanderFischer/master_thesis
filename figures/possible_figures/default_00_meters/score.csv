@@ -1,0 +1,9 @@
+auc
+test,0.6623412282239273
+train,0.683750633515977
+cascade efficiency (0.5 track efficiency)
+test,0.7288430426735206
+train,0.7603767323330122
+"ks-test score of probability distribution (score, p-value)"
+track,0.10101010101010105,0.6703774144597507
+cascade,0.06060606060606061,0.9915946836777281
